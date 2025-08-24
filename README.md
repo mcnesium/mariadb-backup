@@ -84,12 +84,12 @@ networks:
 | BACKUP_KEEP_WEEKS | Number of weekly backups to keep before removal. Defaults to `4`. |
 | BACKUP_KEEP_MONTHS | Number of monthly backups to keep before removal. Defaults to `6`. |
 | BACKUP_KEEP_MINS | Number of minutes for `last` folder backups to keep before removal. Defaults to `1440`. |
-| MARIADB_DB | Comma or space separated list of postgres databases to backup. Required. |
-| MARIADB_HOST | MariaDB connection parameter; postgres host to connect to. Required. |
-| MARIADB_PASSWORD | MariaDB connection parameter; postgres password to connect with. Required. |
-| MARIADB_PORT | MariaDB connection parameter; postgres port to connect to. Defaults to `3306`. |
-| MARIADB_USER | MariaDB connection parameter; postgres user to connect with. Required. |
-| SCHEDULE | [tokio-cron-scheduler](https://docs.rs/crate/tokio-cron-scheduler/latest) specifying the interval between postgres backups. Defaults to `0 0 */24 * * * *`. |
+| MARIADB_DB | Comma or space separated list of mariadb databases to backup. Required. |
+| MARIADB_HOST | MariaDB connection parameter; mariadb host to connect to. Required. |
+| MARIADB_PASSWORD | MariaDB connection parameter; mariadb password to connect with. Required. |
+| MARIADB_PORT | MariaDB connection parameter; mariadb port to connect to. Defaults to `3306`. |
+| MARIADB_USER | MariaDB connection parameter; mariadb user to connect with. Required. |
+| SCHEDULE | [tokio-cron-scheduler](https://docs.rs/crate/tokio-cron-scheduler/latest) specifying the interval between mariadb backups. Defaults to `0 0 */24 * * * *`. |
 | WEBHOOK_URL | URL to be called after an error or after a successful backup (POST with a JSON payload, check `hooks/00-webhook` file for more info). Default disabled. |
 | WEBHOOK_EXTRA_ARGS | Extra arguments for the `curl` execution in the webhook (check `hooks/00-webhook` file for more info). |
 
